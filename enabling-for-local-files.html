@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enabling Mobile Site Viewer for Local Files</title>
+  <meta name="description" content="A quick guide to enabling Mobile Site Viewer for local HTML files (file:// URLs) in Chrome.">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background-color: #f8f9fc;
+      color: #090e34;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #090e34;
+    }
+
+    .header-left img {
+      width: 36px;
+      height: 36px;
+    }
+
+    .header-left span {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 96px 24px 40px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #090e34;
+      margin-bottom: 24px;
+      line-height: 1.3;
+      text-align: center;
+    }
+
+    .intro {
+      font-size: 17px;
+      color: #4b5563;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .intro code {
+      background: #eef0f3;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
+    }
+
+    .step {
+      margin-bottom: 40px;
+    }
+
+    .step-text {
+      font-size: 18px;
+      color: #1f2937;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .step-text code {
+      background: #eef0f3;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 15px;
+      font-family: 'SF Mono', Menlo, Consolas, monospace;
+    }
+
+    .step-number {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    .step-image {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 12px;
+      border: 1px solid #e0e3ea;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      display: block;
+    }
+
+    .outro {
+      margin-top: 56px;
+      padding: 20px 24px;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 12px;
+      color: #065f46;
+      font-size: 15px;
+    }
+
+    .outro strong {
+      color: #047857;
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #9ca3af;
+      font-size: 14px;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 96px 16px 40px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .intro {
+        font-size: 15px;
+        margin-bottom: 36px;
+      }
+
+      .step-text {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="header-left" href="/">
+      <img src="icons/icon128.png" alt="Mobile Site Viewer logo">
+      <span>Mobile Site Viewer</span>
+    </a>
+  </header>
+
+  <main>
+    <h1>Enabling Mobile Site Viewer for Local Files</h1>
+
+    <div class="step">
+      <p class="step-text"><span class="step-number">1</span>Open the extensions page (type <code>chrome://extensions</code> in the address bar), find <strong>Mobile Site Viewer</strong> in the list and click the <strong>Details</strong> button under it.</p>
+      <img class="step-image" src="images/local-files-step1.png" alt="Open chrome://extensions and click Details on Mobile Site Viewer" loading="lazy" style="width: 75%; margin: 0 auto;">
+    </div>
+
+    <div class="step">
+      <p class="step-text"><span class="step-number">2</span>Scroll down to the <strong>Allow access to file URLs</strong> toggle and switch it on.</p>
+      <img class="step-image" src="images/local-files-step2.png" alt="Turn on Allow access to file URLs" loading="lazy">
+    </div>
+
+    <div class="outro">
+      <strong>That's it.</strong> Open any local HTML file in Chrome and click the Mobile Site Viewer icon &mdash; the simulator will launch as usual. The setting persists across browser restarts.
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Mobile Site Viewer. All rights reserved.
+  </footer>
+</body>
+</html>
